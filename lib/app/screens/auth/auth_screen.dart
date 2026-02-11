@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:olearis_test_task/app/common/widgets/app_text_field.dart';
+import 'package:olearis_test_task/app/common/widgets/logo_widget.dart';
 import 'package:olearis_test_task/app/screens/auth/auth_view_model.dart';
 import 'package:olearis_test_task/app/screens/auth/continue_button.dart';
 
@@ -47,17 +47,7 @@ class AuthScreen extends StatelessWidget {
                   children: [
                     const Spacer(),
                     const SizedBox(height: 24),
-                    ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxWidth: 375,
-                        maxHeight: 100,
-                      ),
-                      child: SvgPicture.asset(
-                        'assets/olearis_logo.svg',
-                        fit: BoxFit.contain,
-                        width: screenSize.width,
-                      ),
-                    ),
+                    LogoWidget(maxWidth: screenSize.width),
                     const Spacer(),
                     AppTextField(
                       labelText: 'Login',
