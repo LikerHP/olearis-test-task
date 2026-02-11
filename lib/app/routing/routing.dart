@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:olearis_test_task/app/routing/route_constants.dart';
+import 'package:olearis_test_task/app/screens/auth/auth_factory.dart';
 
 class Routing {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -15,16 +17,16 @@ class Routing {
   }
 
   static PageRoute _buildAuthScreen(RouteSettings settings) {
-    return MaterialPageRoute(
+    return CupertinoPageRoute(
       settings: settings,
       builder: (BuildContext context) {
-        return SizedBox();
+        return AuthFactory.build();
       },
     );
   }
 
   static PageRoute _buildHomeScreen(RouteSettings settings) {
-    return MaterialPageRoute(
+    return CupertinoPageRoute(
       settings: settings,
       builder: (BuildContext context) {
         return SizedBox();
@@ -33,7 +35,7 @@ class Routing {
   }
 
   static PageRoute _buildErrorScreen(RouteSettings settings) {
-    return MaterialPageRoute(
+    return CupertinoPageRoute(
       settings: settings,
       builder: (BuildContext context) {
         return const Scaffold(
