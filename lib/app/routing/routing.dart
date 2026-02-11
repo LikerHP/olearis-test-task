@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:olearis_test_task/app/routing/route_constants.dart';
 import 'package:olearis_test_task/app/screens/auth/auth_factory.dart';
+import 'package:olearis_test_task/app/screens/home/home_factory.dart';
 
 class Routing {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -29,7 +30,7 @@ class Routing {
     return CupertinoPageRoute(
       settings: settings,
       builder: (BuildContext context) {
-        return SizedBox();
+        return HomeFactory.build();
       },
     );
   }
