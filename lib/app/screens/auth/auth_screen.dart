@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:olearis_test_task/app/common/widgets/app_text_field.dart';
 import 'package:olearis_test_task/app/common/widgets/logo_widget.dart';
 import 'package:olearis_test_task/app/screens/auth/auth_view_model.dart';
-import 'package:olearis_test_task/app/screens/auth/continue_button.dart';
+import 'package:olearis_test_task/app/screens/auth/widgets/continue_button.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({required this.viewModel, super.key});
