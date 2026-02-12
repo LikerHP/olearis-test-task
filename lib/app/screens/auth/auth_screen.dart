@@ -21,11 +21,7 @@ class AuthScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 4,
-        shadowColor: Colors.black,
-        scrolledUnderElevation: 4,
-        surfaceTintColor: Colors.transparent,
-        title: Text('Sign In'),
+        title: const Text('Sign In'),
       ),
       body: Scrollbar(
         child: SingleChildScrollView(
@@ -33,7 +29,7 @@ class AuthScreen extends StatelessWidget {
           child: ConstrainedBox(
             constraints: BoxConstraints(
               minHeight: screenSize.height -
-                  MediaQuery.of(context).padding.top -
+                  viewPadding.top -
                   kToolbarHeight -
                   viewInsets.bottom,
             ),
@@ -47,7 +43,17 @@ class AuthScreen extends StatelessWidget {
                   children: [
                     const Spacer(),
                     const SizedBox(height: 24),
-                    LogoWidget(maxWidth: screenSize.width),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minHeight: 100,
+                        maxHeight: 100,
+                        maxWidth: 375,
+                      ),
+                      child: SizedBox(
+                        width: screenSize.width,
+                        child: LogoWidget(),
+                      ),
+                    ),
                     const Spacer(),
                     AppTextField(
                       labelText: 'Login',
